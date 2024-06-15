@@ -10,10 +10,15 @@
 \usepackage[utf8]{inputenc}
 %
 \usepackage{magnini-dl-2024-talk}
+\usepackage{graphicx}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title[Actively Learning from LLMs]{
     % same title of the presented paper
-    Actively Learning Ontologies from LLMs: First Results
+    \textbf{
+        Actively Learning Ontologies from LLMs:
+        \\
+        First Results
+    }
 }
 %
 % \subtitle{Extended Abstract}
@@ -46,33 +51,31 @@
 }
 %
 \date[DL, 2024]{
-	International Workshop on
-	\\
-	Description Logics (DL)
+	International Workshop on Description Logics
 	\\
 	June 20th, 2024, Bergen (Norway)
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\AtBeginSection[]
-{
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}<beamer>[c,noframenumbering]
-\frametitle{Next in Line\ldots}
-\tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide]
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
-}
-\AtBeginSubsection[]
-{
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}<beamer>[shrink,noframenumbering]
-    \frametitle{Focus on\ldots}
-	\mbox{~}
-	\tableofcontents[currentsubsection,sectionstyle=shaded,subsectionstyle=show/shaded]
-	\mbox{~}
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
-}
+%\AtBeginSection[]
+%{
+%%\\\\\\\\\\\\\\\\\\\\\
+%\begin{frame}<beamer>[c,noframenumbering]
+%\frametitle{Next in Line\ldots}
+%\tableofcontents[sectionstyle=show/shaded,subsectionstyle=hide]
+%\end{frame}
+%%\\\\\\\\\\\\\\\\\\\\\
+%}
+%\AtBeginSubsection[]
+%{
+%%\\\\\\\\\\\\\\\\\\\\\
+%\begin{frame}<beamer>[shrink,noframenumbering]
+%    \frametitle{Focus on\ldots}
+%	\mbox{~}
+%	\tableofcontents[currentsubsection,sectionstyle=shaded,subsectionstyle=show/shaded]
+%	\mbox{~}
+%\end{frame}
+%%\\\\\\\\\\\\\\\\\\\\\
+%}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -88,38 +91,24 @@
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[c]{Context}
     
-    Provide some context (max 4-5 items):
-    %
-    \vfill
-    %
+    % Actively Learning
+    % Ontologies
+    % Membership queries
+    % LLMs
+
     \begin{itemize}
-        \item fact 1
-        %
-        \begin{itemize}
-            \item note
-        \end{itemize}
-        
-        \vfill
-        
-        \item[$\Rightarrow$] fact 2 implied by fact 1
-        %
-        \begin{itemize}
-            \item[!] important \alert{notice}
-        \end{itemize}
-        
-        \vfill
-        
-        \item fact 3
-        %
-        \begin{itemize}
-            \item note
-        \end{itemize}
-        
-        \vfill
-        
-        \item fact 4
-        
+        \item \emph{Actively Learning} $\rightarrow$ a learner attempts to learn some kind of knowledge by posing questions to a teacher.
+        \vspace{0.1cm}
+        \item \emph{Ontologies} $\rightarrow$ we consider the case in which the knowledge is expressed as an \EL~ontology.
+        \vspace{0.1cm}
+        \item \emph{Membership queries} $\rightarrow$ the learner can ask the teacher whether a given axiom belongs to the target ontology.
     \end{itemize}
+    \vfill
+    \begin{figure}
+        \includegraphics[width=0.6\textwidth]{figures/membership_queries_examples}
+        \hspace{3cm}
+    \end{figure}
+
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
