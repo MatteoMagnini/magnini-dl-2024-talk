@@ -85,7 +85,7 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %===============================================================================
-\section{Motivation \& Context}
+\section{Vision \& Context}
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
@@ -113,112 +113,101 @@
 %\\\\\\\\\\\\\\\\\\\\\
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}[c]{Motivation}
-    Enumerate motivations for this work:
+\begin{frame}[c]{Vision}
+    % LLMs as teachers
+    % Why? Because they have been trained on large amounts of data of many domains
+    % Challenges:
+    % - input format
+    % - handling the response
+    % - correctness and logical consistency of the answers
+
+    We want to use \emph{large language models} (LLMs) as teachers.
+    %
+    LLMs have been trained on large amounts of data from many domains, and we want to exploit this underlying knowledge.
     %
     \vfill
     %
+    Challenges:
+    %
     \begin{itemize}
-        \item motivation 1
+        \item \emph{input format}
+        \\
+        \quad $\rightarrow$ we used Manchester OWL syntax.
         %
-        \begin{itemize}
-            \item[e.g.] example
-        \end{itemize}
-        
-        \vfill
-        
-        \item motivation 2
+        \item \emph{handling the response}
+        \\
+        \quad $\rightarrow$ mitigation strategies and parsing.
         %
-        \begin{itemize}
-            \item note
-        \end{itemize}
-        
-        \vfill
-        
-        \item motivation 3 with citations \ccite{crawford2016artificial,RibeiroSG16,wexler2017computer}
-        
-        \vfill
-        
-        \item etc
-        
+        \item \emph{correctness and logical consistency of the answers}
+        \\
+        \quad $\rightarrow$ logical closure.
+        %
     \end{itemize}
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
-
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{Some state of the art (optional)}
-
-    Provide relevant information about the state of the art / related works here, possibly with references
-
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
-
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}{Contribution of the paper}
-
-\begin{block}{Explicitly state the contributions of the paper}
-    \begin{itemize}
-        \item contribution 1
-        \item contribution 2
-    \end{itemize}
-\end{block}
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
 
 %===============================================================================
-\section{Theory / modelling / design}
+\section{Experiments \& Results}
 %===============================================================================
 
 %\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}%[allowframebreaks]
-\frametitle{Theory / modelling / design}
+\begin{frame}[c]{Experiments}
 
-    Provide 2-3 slides discussing the Theory / modelling / design
+    % 5 EL ontologies from the ExactLearner work
+    % 5 LLMs: GPT-3, mistral, mixtral, llama2 7b, llama2 13b
+    % 3 different experiments:
+    % - check that LLMs can answer axioms of the ontologies
+    % - same check but on the entailed axioms (logical closure is finite!)
+    % - active learning
 
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
-
-\section{Case study / Experiments / Results}
-
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}%[allowframebreaks]
-\frametitle{Case study / Experiments / Results}
-
-    Provide 2-3 slides discussing the Case study / Experiments / Results of the paper
-
-\end{frame}
-%\\\\\\\\\\\\\\\\\\\\\
-
-\section{Conclusions \& future works}
-
-%\\\\\\\\\\\\\\\\\\\\\
-\begin{frame}%[allowframebreaks]
-\frametitle{Conclusions \& future works}
-
-\begin{block}{Summing up}
-    Summarise the most relevant contributions of this study:
+    We conducted experiments with:
+    \vfill
     %
     \begin{itemize}
-        \item conclusion 1
-        \item conclusion 2
-        \item conclusion 3
+        \item \emph{5 \EL~ontologies} $\rightarrow$ Animals, Cell, Football, Generation and University (from the ExactLearner work).
+        %
+        \vfill
+        \item \emph{5 LLMs} $\rightarrow$ GPT 3.5 Turbo, mistral 7b, mixtral 47b, llama2 7b, llama2 13b.
+        %
+        \vfill
+        \item \emph{3 different experiments}:
+        \begin{itemize}
+            \item \quad check that LLMs can answer axioms of the ontologies.
+            \item \quad same check but on the entailed axioms
+            \\\quad (logical closure is finite!).
+            \item \quad active learning with a trivial learning algorithm.
+        \end{itemize}
+        \vfill
     \end{itemize}
-\end{block}
-
-\begin{exampleblock}{Future works}
-    Sketch some future research directions
-    %
-    \begin{itemize}
-        \item future work 1
-        \item future work 2
-    \end{itemize}
-\end{exampleblock}
-
-(may be split into 2 slides)
 
 \end{frame}
 %\\\\\\\\\\\\\\\\\\\\\
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Results}
+
+    % What did we find?
+    % - LLMs can answer axioms of the ontologies
+    % - LLMs can answer entailed axioms but we measure some logical inconsistencies
+    % - LLMs can be used for active learning. There is statistical evidence that the answers of the LLMs (in particular GPT 3.5 Turbo, Mistral and Mixtral) correlate with the knowledge in the ontologies.
+
+    What did we find?
+    \vfill
+    %
+    \begin{itemize}
+        \item \emph{LLMs can answer axioms of the ontologies}.
+        %
+        \vfill
+        \item \emph{LLMs can answer entailed axioms} but we measure some logical inconsistencies.
+        %
+        \vfill
+        \item \emph{LLMs can be used for active learning}
+        \\
+        $\rightarrow$ there is statistical evidence that the answers of the LLMs (in particular GPT 3.5 Turbo, Mistral and Mixtral) correlate with the knowledge in the ontologies.
+    \end{itemize}
+
+\end{frame}
 
 %===============================================================================
 \section*{}
@@ -229,6 +218,7 @@
 \section*{\bibname}
 %===============================================================================
 
+\nocite{*}
 \setbeamertemplate{page number in head/foot}{}
 %\\\\\\\\\\\\\\\\\\\\\
 \begin{frame}[t,allowframebreaks,noframenumbering]\frametitle{\refname}
