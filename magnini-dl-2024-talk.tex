@@ -198,10 +198,7 @@
     \vfill
     %
     \begin{itemize}
-        \item \emph{LLMs can answer axioms of the ontologies}.
-        %
-        \vfill
-        \item \emph{LLMs can answer entailed axioms} but we measure some logical inconsistencies.
+        \item \emph{LLMs can answer axioms of the ontologies} and the entailed axioms, but we measure some logical inconsistencies.
         %
         \vfill
         \item \emph{LLMs can be used for active learning}
@@ -212,6 +209,34 @@
         \\
         correlate with the knowledge in the ontologies.
     \end{itemize}
+
+\end{frame}
+
+%===============================================================================
+\section{Future Work}
+%===============================================================================
+
+%\\\\\\\\\\\\\\\\\\\\\
+\begin{frame}[c]{Future work}
+
+    \vfill
+    We are currently working on an extension of the ExactLearner~\ccite{exact-learner-tool-2018} framework to use LLMs as teachers.
+    %
+    Some spoilers:
+    \vfill
+    \begin{itemize}
+        \item \emph{system prompts} $\rightarrow$ provide contextual information to the LLM.
+        %
+        \vfill
+        %
+        \item \emph{input format} $\rightarrow$ not only Manchester OWL syntax.
+        %
+        \vfill
+        %
+        \item \emph{size matters} $\rightarrow$ we take into account more ontologies.
+        \vfill
+    \end{itemize}
+    \vfill
 
 \end{frame}
 
